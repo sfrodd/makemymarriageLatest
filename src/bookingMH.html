@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./MyCss/beautify.css">
+    <link rel="stylesheet" href="../node_modules\bootstrap-icons\font\bootstrap-icons.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="./MyScripts/dynamic.js"></script>
+    <script src="./Data/mHallArea.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="wed-container mt-4 flex-column">
+    <div style="display:flex;width:700px;flex-direction: row;">    
+    <button id="fetchData" style="width:280px" class="btn btn-primary m-3"><span><i class="bi bi-clipboard-data mx-3"></i>Get==Data</span></button>
+    <select id="area" class="form-select m-3 w-50" aria-label="Default select example">
+        <option selected>Select Area</option>
+        <option value="1">BhagyaNagar</option>
+        <option value="2">Shahapur</option>
+        <option value="3">Vadagaon</option>
+      </select>
+    <input id="bDate" style="height:60px" class="form-control m-3 w-50 h-50 row-cols-md-3" type="date">
+    </div>
+    <ul id="myList" class="list-group mt-5" style="list-style:none">
+    
+    </ul>
+    </div>
+</body>
+</html>
