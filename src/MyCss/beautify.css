@@ -1,11 +1,15 @@
 .wed-container{
     background-color:orange;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    height: 400px;
+    height: 500px;
     width: 99%;
     display: flex;
     align-items: baseline;
     margin: 10px;
     padding:10px;
     border-radius: 0.25rem;
+  }
+
+  .wed .wed-container{
+    flex-direction: column;
   }

@@ -1,0 +1,5 @@
+$(function(){
+
+$("#myCart").append("<li>")
+
+})

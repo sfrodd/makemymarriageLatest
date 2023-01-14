@@ -10,8 +10,16 @@
 <link rel="stylesheet" href="./allStyles1/main.css">
 <link rel="stylesheet" href="./allStyles1/cards.css">
 <link rel="stylesheet" href="./node_modules\bootstrap-icons\font\bootstrap-icons.css">
-<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/jquery/dist/jquery.session.js"></script>
+<script src="./MyScripts/authenticate.js"></script>
 <script src="./allScripts1/ajaxNode.js"></script>
+<script>
+    if($.session.get('logged')) ;
+    else
+    window.location="./Login.html";
+</script>
+<title>Make my Marriage Portal</title>
 </head>
 <body>
     <center>
@@ -23,7 +31,7 @@
         <a href="./bookingMH.html">    <div class="container">Marriage HAll Booking</div></a>
     </div>
     <div class="polaroid"><img src="./images/camera.jpg" alt="Norway" style="width:100%">
-        <a href="./bookingMH.html">  <div class="container">PhotGrapher Booking</div></a>
+        <a href="./bookingService.html">  <div class="container">PhotGrapher Booking</div></a>
     </div>
     <div class="polaroid"><img src="./images/priest.jfif" alt="Norway" style="width:100%">
         <div class="container">Priest Booking</div>

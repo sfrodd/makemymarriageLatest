@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./MyCss/beautify.css">
+    <link rel="stylesheet" href="../node_modules\bootstrap-icons\font\bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.checked {
+  color: orange;
+}
+</style>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="./MyScripts/serviceBooking.js"></script>
+    <script src="./Data/ServiceNames.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="wed-container mt-4 flex-column">
+    <div style="display:flex;width:1000px;flex-direction: row;">    
+    <button id="fetchservData" style="width:280px" class="btn btn-primary m-3 w-25"><span><i class="bi bi-clipboard-data mx-3"></i>Get==Data</span></button>
+    <select id="serviceList" class="form-select m-3 w-25" aria-label="Default select example">
+           
+      </select>
+    <div style="width:100px;height:40px;margin-right:30px;color:cadetblue;display:flex"><span class="badge badge-danger my-4 w-25">Select-Booking-Date</span></div>
+    <input id="servDate" style="height:60px" class="form-control m-3 mx-lg-auto w-25 h-50 row-cols-md-3" type="date">
+    </div>
+    <ul id="myservList" class="list-group mt-5" style="list-style:none">
+    
+    </ul>
+    <ul id="myservDetails" class="list-group mt-5" style="list-style:none">
+    </ul>
+    </div>
+</body>
+</html>

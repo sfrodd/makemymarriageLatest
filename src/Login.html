@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./MyCss/login.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.session.js"></script>
+    <script src="./MyScripts/authenticate.js"></script>
+    <title>Document</title>
+</head>
+<body>   
+    <div class="login">
+        <form class="form-login" method="post">
+    <div style="display:flex;justify-items:stretch;">        
+    <h4 style="color:red;margin-bottom:20px;margin-left: 10px;justify-content:center;display: flex;">Make-MyMarriage Portal</h4> 
+    <img src="./images/jFTS.jpg" style="margin-left:100px" width="100px" height="100px">
+    </div>
+    <div class="display:flex;width:300px;height:100px">
+    <span style="margin-left:20px;color:blue">Login</span><input id="login" type="text" class="form-control m-3 w-50"></div>
+    <div class="display:flex">
+    <span style="margin-left:20px;color:blue">Password</span><input id="password" type="password" class="form-control m-3 w-50">
+    <label style="margin-left:20px;padding-left:20px;" id="msg"></label>
+    </div>
+    <span style="margin-left:20px"></span><button id="log" type="submit" class="btn btn-warning">Login</button>  
+    </form>
+    </div>
+</body>
+</html>

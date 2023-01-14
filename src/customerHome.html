@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./MyCss/beautify.css">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.session.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.sessionTimeout.js"></script>
+    <script src="./MyScripts/bookings.js"></script>
+    <script  src="./MyScripts/authenticate.js"></script>
+<script>
+    if($.session('logged'));
+    else
+    window.location="http://127.0.0.1:5502/src/Login.html"
+</script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2 style="color:red;margin-left:100px;margin-bottom: 30px;">Welcome to Make-my-Marriage Portal -- <span id="user"></span></h2>
+        <span id="user"></span>
+    </div>
+    <div style="flex-direction:column" class="wed wed-container">
+    <h4 style="margin-left:20px;color:yellow">Your Booking Details</h3>
+    <br>
+    <ul id="myCart" class="list-group mt-2" style="list-style: none;">
+
+
+    </ul>
+    </div>
+</body>
+</html>
