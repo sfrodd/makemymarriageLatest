@@ -1,5 +1,6 @@
 $(function(){
   //Initialize Area List
+  var custID=$.Session.get('cid');
    var tempResult=[]; 
    $("#area").empty();
    for(let i=0;i<allAreas.length;i++)
@@ -60,6 +61,16 @@ $(function(){
        console.log("Reserved.."+result)
        }
       })
+      //Add to cart
+      $.ajax({
+        url:"http://localhost:8000/api/insertData",
+        type:"POST",
+        dataType:"json",
+        data :{'cid':1,'serv_name':"MarriageHall "+mhid,price:35000,custId:custID},
+        success:function(result){
+        console.log("Inserted.."+result)
+        }
+       })
       //Toggle Button Status..  
       $("#status"+id).fadeOut(1000,function(){
           $("#status"+id).fadeIn(1000)

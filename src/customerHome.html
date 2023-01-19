@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/font-awesome.min">
     <link rel="stylesheet" href="./MyCss/beautify.css">
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/jquery/dist/jquery.session.js"></script>
     <script src="../node_modules/jquery/dist/jquery.sessionTimeout.js"></script>
-    <script src="./MyScripts/bookings.js"></script>
     <script  src="./MyScripts/authenticate.js"></script>
+    <script src="./MyScripts/customer.js"></script>
+    <script src="./MyScripts/dynamic.js"></script>
+    <script src="./Data/mHallArea.js"></script>
 <script>
     if($.session('logged'));
     else
@@ -30,6 +33,8 @@
 
 
     </ul>
+    <a href="./bookingService.html"><button class="btn btn-primary m-3" >Book Service</button></a>
+    <a href="./bookingMH.html"><button class="btn btn-primary m-3" >Book Marriage Hall</button></a>
     </div>
 </body>
 </html>

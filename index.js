@@ -79,7 +79,49 @@ App.post("/getData",(req,res)=>{
             }
         })   
 
-            })        // Other Services like Photographer, Beautician etc..
+})       
+//Insert into Cart...
+App.post("/api/insertData",(req,res)=>{
+  var dataToInsert=[];
+  var cid = parseInt(req.body.cid);
+  var sname = req.body.serv_name;
+  var price = parseFloat(req.body.price);
+  var custid =1000;
+  dataToInsert.push(cid);
+  dataToInsert.push(sname);
+  dataToInsert.push(price);
+  dataToInsert.push(custid);
+    let query='insert into mycart(cart_id,service,price,custID) values (?)';
+    //myCon.query("select mh.mhid,mhName,area,price,bkgdate,hstatus,capacity from marriagehall mh, mhallbooking mb where mh.mhid=mb.mhid and Area=? and bkgdate=?",[area,bkgDate],function(err,result){
+    myCon.query(query,[dataToInsert],function(err,result){ 
+     if(err) console.log(err);
+        else{
+            console.log(result)
+            console.log(result.affectedRows)
+      res.send(result) 
+        }
+    })   
+
+})       
+            
+App.get("/api/getCart/:cid",(req,res)=>{
+    var cid =parseInt(req.params.cid);
+    console.log("I am here...with cid - "+cid)
+    //myCon.query("select mh.mhid,mhName,area,price,bkgdate,hstatus,capacity from marriagehall mh, mhallbooking mb where mh.mhid=mb.mhid and Area=? and bkgdate=?",[area,bkgDate],function(err,result){
+    myCon.query("select * from mycart where custID=?",[cid],function(err,result){ 
+     if(err) console.log(err);
+        else{
+            console.log(result)
+      res.send(result) 
+        }
+    })   
+
+        })        // Other Services like Photographer, Beautician etc..
+           
+            
+            
+            
+            // Other Services like Photographer, Beautician etc..
         App.post("/api/getServices",(req,res)=>{
             var cat =("'"+ req.body.serveCat+"'").trim();
             var bkgDate =("'"+ req.body.bkgDate1+"'").trim();

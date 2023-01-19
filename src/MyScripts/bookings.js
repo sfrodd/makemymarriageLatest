@@ -1,5 +1,5 @@
 $(function(){
-
+    
 if($.session.get('logged')) 
 {
 $("#myCart").append("<li style='color:red;width:900px;' class='list-group-item d-flex w-auto"+
