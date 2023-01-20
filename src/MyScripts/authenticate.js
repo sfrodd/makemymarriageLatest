@@ -11,7 +11,7 @@ $("#log").on("click",function(event){
     var usrName;
     var passWord;
     var cidoradmin;
-    alert($.session.get('user'))
+//    alert($.session.get('user'))
     $.ajax({
         url:"http://localhost:8000/api/getUser/"+$("#login").val().trim(),
         type:"GET",

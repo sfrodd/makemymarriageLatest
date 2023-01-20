@@ -1,9 +1,7 @@
 $(function(){
 let custId=$("#user").text();
 $.Session.set('cid',custId);
-$("#area").empty();
-   for(let i=0;i<allAreas.length;i++)
-     $("#area").append("<option id='op"+i+"'>"+allAreas[i]+"</option>")
+
 $.ajax({
    url:"http://localhost:8000/api/getCart/"+custId,
    type:"GET",
